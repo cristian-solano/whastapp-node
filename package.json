@@ -8,6 +8,9 @@
     "dev": "NODE_ENV=development nodemon ./src/app.js",
     "eslint": "eslint --ignore-path .gitignore .",
     "prettier": "prettier --write '**/*.js' --ignore-path .gitignore .",
+    
+    "test:watch": "jest --watch",
+	  "test:coverage": "jest --coverage",
     "test": "NODE_ENV=test ./node_modules/.bin/mocha ./src/**/test/*.test.js"
   },
   "repository": {
@@ -45,8 +48,10 @@
     "eslint": "^8.18.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "jest": "^28.1.1",
     "mocha": "^10.0.0",
     "nodemon": "^2.0.16",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "supertest": "^6.2.3"
   }
 }

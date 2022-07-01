@@ -17,11 +17,12 @@ module.exports = {
             dialect: 'postgres',
         },
         production: {
+            url: process.env.DATABASE_URL,
             username: process.env.DB_PROD_USERNAME,
             password: process.env.DB_PROD_PASSWORD,
             database: process.env.DB_PROD_DATABASE,
             host: process.env.DB_PROD_HOST,
-            dialect: 'mysql',
+            dialect: 'postgres',
         },
     },
 };

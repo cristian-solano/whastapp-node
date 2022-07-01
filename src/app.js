@@ -7,7 +7,7 @@ const config = require("./config");
 // Routers
 const  usersRouter  = require("./users/users.router").router
 const  authRouter  = require("./auth/auth.router").router
-const  conversationRouter  = require("./conversations/conversation.router").router
+
 const participantsRouter = require('./participants/participants.router').router
 
 // Init express app
@@ -30,6 +30,11 @@ app.use("/api/v1/users", usersRouter);
 app.use("/api/v1/auth", authRouter );
 app.use("/api/v1/conversations", participantsRouter);
 
+app.get('/', (req, res) => {
+    res.status(200).json({
+        message: "Welcome to the api"
+    })
+})
 app.listen(config.port, () => {
     console.log(`Server started at Port ${config.port}`)
 })
